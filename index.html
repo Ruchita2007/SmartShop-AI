@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartShop AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+
+        <div class="logo">
+            🛍️ SmartShop AI
+        </div>
+
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="ai.html">AI Assistant</a>
+    <a href="cart.html">Cart 🛒</a>
+</nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                ✨ AI-Powered Shopping
+            </span>
+
+            <h1>
+                Shop Smarter.<br>
+                <span>Buy Better.</span>
+            </h1>
+
+            <p>
+                Find the perfect products with our AI shopping
+                assistant and discover personalized recommendations.
+            </p>
+
+            <button onclick="scrollToAssistant()">
+                Try AI Assistant 🤖
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI ASSISTANT -->
+    <section class="assistant-section" id="assistant">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                SMART SHOPPING
+            </span>
+
+            <h2>
+                🤖 AI Shopping Assistant
+            </h2>
+
+            <p>
+                Tell me what you are looking for and I'll help
+                you find the perfect products.
+            </p>
+
+        </div>
+
+
+        <div class="assistant-box">
+
+            <input
+                type="text"
+                id="userQuery"
+                placeholder="Example: I need a birthday gift under ₹1500"
+            >
+
+            <button onclick="askAI()">
+                Ask AI ✨
+            </button>
+
+        </div>
+
+
+        <div id="aiResponse" class="ai-response">
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                OUR PRODUCTS
+            </span>
+
+            <h2>
+                Popular Products
+            </h2>
+
+            <p>
+                Explore products recommended for smart shoppers.
+            </p>
+
+
+            <!-- SEARCH BAR -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search products..."
+                    onkeyup="searchProducts()"
+                >
+
+            </div>
+
+
+            <!-- CATEGORY FILTER -->
+            <div class="filter-box">
+
+                <button
+                    class="filter-btn active"
+                    onclick="filterProducts('all')"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterProducts('Electronics')"
+                >
+                    Electronics
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterProducts('Lifestyle')"
+                >
+                    Lifestyle
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterProducts('Gifts')"
+                >
+                    Gifts
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT CONTAINER -->
+        <div class="product-container">
+
+
+            <!-- PRODUCT 1 -->
+            <div
+                class="product-card"
+                data-category="Electronics"
+            >
+
+                <div class="product-image">
+                    ⌚
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3>
+                        Smart Watch
+                    </h3>
+
+                    <p>
+                        Fitness & Health Smart Watch
+                    </p>
+
+                    <div class="price-row">
+
+                        <strong>
+                            ₹1,299
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Smart Watch',1299)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div
+                class="product-card"
+                data-category="Electronics"
+            >
+
+                <div class="product-image">
+                    🎧
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Electronics
+                    </span>
+
+                    <h3>
+                        Wireless Earbuds
+                    </h3>
+
+                    <p>
+                        Bluetooth Wireless Earbuds
+                    </p>
+
+                    <div class="price-row">
+
+                        <strong>
+                            ₹999
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Wireless Earbuds',999)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div
+                class="product-card"
+                data-category="Lifestyle"
+            >
+
+                <div class="product-image">
+                    🎒
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Lifestyle
+                    </span>
+
+                    <h3>
+                        Travel Backpack
+                    </h3>
+
+                    <p>
+                        Stylish College & Travel Backpack
+                    </p>
+
+                    <div class="price-row">
+
+                        <strong>
+                            ₹799
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Travel Backpack',799)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div
+                class="product-card"
+                data-category="Gifts"
+            >
+
+                <div class="product-image">
+                    🎁
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Gifts
+                    </span>
+
+                    <h3>
+                        Premium Gift Box
+                    </h3>
+
+                    <p>
+                        Perfect Birthday Gift Box
+                    </p>
+
+                    <div class="price-row">
+
+                        <strong>
+                            ₹199
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Premium Gift Box',199)"
+                        >
+                            Add +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CART -->
+    <section class="cart-section" id="cart">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                SHOPPING CART
+            </span>
+
+            <h2>
+                🛒 Your Cart
+            </h2>
+
+        </div>
+
+
+        <div class="cart-box">
+
+            <!-- CART ITEMS -->
+            <div id="cartItems">
+
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+
+            <!-- CART TOTAL -->
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <!-- CART ACTIONS -->
+            <div class="cart-actions">
+
+                <button
+                    class="clear-cart-btn"
+                    onclick="clearCart()"
+                >
+                    🗑️ Clear Cart
+                </button>
+
+
+                <button
+                    class="checkout-btn"
+                    onclick="checkout()"
+                >
+                    💳 Checkout
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🛍️ SmartShop AI
+        </div>
+
+        <p>
+            AI-powered shopping and revenue growth platform.
+        </p>
+
+        <p class="copyright">
+            © 2026 SmartShop AI. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

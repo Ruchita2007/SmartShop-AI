@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | SmartShop AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="logo">
+            🛍️ SmartShop AI
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="ai.html">AI Assistant</a>
+            <a href="cart.html">Cart 🛒</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CHECKOUT SECTION -->
+
+    <section class="cart-section">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                CHECKOUT
+            </span>
+
+            <h2>
+                💳 Complete Your Order
+            </h2>
+
+            <p>
+                Enter your details to place your order.
+            </p>
+
+        </div>
+
+
+        <div class="cart-box checkout-box">
+
+            <form id="checkoutForm">
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="customerAddress"
+                    placeholder="Enter your address"
+                    required
+                >
+
+
+                <select id="paymentMethod">
+
+                    <option value="">
+                        Select Payment Method
+                    </option>
+
+                    <option>
+                        Cash on Delivery
+                    </option>
+
+                    <option>
+                        UPI
+                    </option>
+
+                    <option>
+                        Credit / Debit Card
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="submit"
+                    class="checkout-btn"
+                >
+                    Place Order 🛍️
+                </button>
+
+            </form>
+
+
+            <div
+                id="orderMessage"
+                class="order-message"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🛍️ SmartShop AI
+        </div>
+
+        <p>
+            AI-powered shopping and revenue growth platform.
+        </p>
+
+        <p class="copyright">
+            © 2026 SmartShop AI. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

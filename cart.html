@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart | SmartShop AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+
+        <div class="logo">
+            🛍️ SmartShop AI
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="ai.html">AI Assistant</a>
+            <a href="cart.html">Cart 🛒</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CART -->
+    <section class="cart-section">
+
+        <div class="section-heading">
+
+            <span class="small-title">
+                SHOPPING CART
+            </span>
+
+            <h2>
+                🛒 Your Cart
+            </h2>
+
+            <p>
+                Review your selected products before checkout.
+            </p>
+
+        </div>
+
+
+        <div class="cart-box">
+
+            <div id="cartItems">
+
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <!-- CHECKOUT BUTTON -->
+
+            <button
+                class="checkout-btn"
+                onclick="goToCheckout()"
+            >
+                Proceed to Checkout 💳
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🛍️ SmartShop AI
+        </div>
+
+        <p>
+            AI-powered shopping and revenue growth platform.
+        </p>
+
+        <p class="copyright">
+            © 2026 SmartShop AI. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
